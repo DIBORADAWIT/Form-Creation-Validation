@@ -1,4 +1,3 @@
-let url = window.document.url;
 const form = document.getElementById(registration - form);
 const feedbackDiv = document.getElementById("form-feedback");
 
@@ -18,11 +17,9 @@ console.log("password:", password);
 let isValid = true;
 let messages = [];
 
-
-
 if (username.length < 3) {
   isValid = false;
-  messages.push('Username must be at least 3 characters long.');
+  messages.push("Username must be at least 3 characters long.");
 }
 
 if (!email.includes("@") || !email.includes(".")) {
@@ -36,7 +33,7 @@ if (password.length < 8) {
 }
 
 if (!isValid) {
-  console.log(messages); 
+  console.log(messages);
 } else {
   console.log("All inputs are valid.");
 }
@@ -44,10 +41,9 @@ if (!isValid) {
 feedbackDiv.style.display = "block";
 
 if (!isValid) {
-  feedbackDiv.textContent="Registration succerssful";
-  feedbackDiv.style.color="#28a745";
-  
+  feedbackDiv.textContent = "Registration succerssful";
+  feedbackDiv.style.color = "#28a745";
 } else {
-  feedbackDiv.innerHTML=message.join("<br>");
-  feedbackDiv.style.color="#dc3545";
+  feedbackDiv.innerHTML = message.join("<br>");
+  feedbackDiv.style.color = "#dc3545";
 }
